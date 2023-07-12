@@ -1,0 +1,14 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+%centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// %grid {
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   gap: 16px;
+// }

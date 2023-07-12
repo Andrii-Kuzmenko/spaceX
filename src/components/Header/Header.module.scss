@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/extends.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 80px;
+  height: 80px;
+  background: rgba(30, 30, 30, 0.48);
+}
+
+.logo {
+  height: 42px;
+  width: 230px;
+}
+
+.heartButton {
+  background-color: $button-background-color;
+  border-width: 0;
+  cursor: pointer;
+
+  @extend %centered;
+  @include square(53px);
+  @include hover(background-color, $pink-color);
+}
+
+.signInButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  width: 163px;
+  padding: 12px 0px;
+
+  border-width: 0;
+  background-color: $blue-color;
+  cursor: pointer;
+}
+
+.signInButtonText {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: $black-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ButtonGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.active {
+  background-color: $pink-color;
+}
