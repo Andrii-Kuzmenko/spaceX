@@ -1,0 +1,32 @@
+@import '../styles/mixins.scss';
+@import '../styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  // font-family: 'Syne', sans-serif;
+  // height: auto;
+  // width: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
