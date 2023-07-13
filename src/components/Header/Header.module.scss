@@ -11,6 +11,7 @@
   margin: 0 auto;
   padding: 0 80px;
   height: 80px;
+  
   background: rgba(30, 30, 30, 0.48);
 }
 
@@ -21,8 +22,6 @@
 
 .heartButton {
   background-color: $button-background-color;
-  border-width: 0;
-  cursor: pointer;
 
   @extend %centered;
   @include square(53px);
@@ -33,14 +32,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 10px;
   width: 163px;
   padding: 12px 0px;
 
-  border-width: 0;
   background-color: $blue-color;
-  cursor: pointer;
+
+  @include hover(opacity, 0.8);
 }
 
 .signInButtonText {

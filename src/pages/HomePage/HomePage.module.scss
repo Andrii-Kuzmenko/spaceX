@@ -8,14 +8,12 @@
   left: 0;
   right: 0;
   top: 0;
-  // min-height: 100vh;
   height: 740px;
-
-  background-image: url('../../images/pexels-spacex-586056\ 1.jpg');
 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url('../../images/pexels-spacex-586056\ 1.jpg');
 }
 
 .title {
@@ -41,9 +39,8 @@
 }
 
 .exlore {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  margin-bottom: 33px;
+  @extend %centered;
   font-family: 'Lato';
   font-size: 32px;
   font-style: normal;
@@ -52,6 +49,8 @@
   color: $white-color;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+
+  @include hover(opacity, 0.8);
 }
 
 .exloreIcon {

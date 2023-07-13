@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/extends.scss";
+
+.titleGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-top: 96px;
+}
+
+.title {
+  color: $black-title-color;
+  text-align: center;
+  font-family: 'Syne';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.arrow {
+  @extend %centered;
+  @include square(44px);
+  background-color: $button-background-color;
+
+  @include hover(opacity, 0.7);
+}
+
+.arrowLeft {
+  transform: rotate(180deg);
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 96px;
+  cursor: pointer;
+}
+
+.dot {
+  @include hover(transform, scale(1.1));
+}
