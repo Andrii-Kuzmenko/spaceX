@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/extends.scss";
+
+.cardList {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.button {
+  @extend %centered;
+  @include square(53px);
+  background-color: $button-background-color;
+
+  @include hover(background-color, $pink-color);
+}

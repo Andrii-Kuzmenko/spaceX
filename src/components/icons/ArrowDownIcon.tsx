@@ -19,17 +19,17 @@ export const ArrowDownIcon: FC<Props> = ({ className }) => (
           id="Stroke 1"
           d="M20.4572 32.9167V7.91667"
           stroke="white"
-          stroke-width="1.2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           id="Stroke 3"
           d="M30.4978 22.8337L20.4578 32.917L10.4162 22.8337"
           stroke="white"
-          stroke-width="1.2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
     </g>

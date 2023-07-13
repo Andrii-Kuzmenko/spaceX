@@ -2,8 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import styles from "./App.module.scss";
 import './styles/global.scss'
 import { Container, Header } from './components';
-import { HomePage } from './pages/HomePage';
-import { FavoritesPage } from './pages';
+import { HomePage, FavoritesPage } from './pages';
 
 const App: React.FC = () => {
   return (

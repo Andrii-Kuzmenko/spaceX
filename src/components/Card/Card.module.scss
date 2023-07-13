@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.card {
+  width: 411px;
+  // height: 572px;
+  border: 1px solid $blue-color;
+}
+
+.container {
+  padding: 0 32px;
+}
+
+.image {
+  display: block;
+  height: 296px;
+  width: 100%;
+  margin-bottom: 32px;
+  object-fit: cover;
+}
+
+.name {
+  margin-bottom: 16px;
+  color: $black-title-color;
+  text-align: center;
+  font-family: 'Syne';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.description {
+  height: 270px;
+  margin-bottom: 64px;
+  color: $grey-text-color;
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.button {
+  height: 53px;
+  width: 278px;
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue-color;
+
+  @include hover(background-color, rgba(30,30,30,0.8));
+}
+
+.buttonText {
+  color: $black-color;
+  text-align: center;
+  font-family: 'Syne';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}

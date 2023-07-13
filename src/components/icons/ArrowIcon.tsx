@@ -19,9 +19,9 @@ export const ArrowIcon: FC<Props> = ({ className }) => (
           id="Stroke 1"
           d="M15.5 5L8.5 12L15.5 19"
           stroke="#200E32"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
     </g>
