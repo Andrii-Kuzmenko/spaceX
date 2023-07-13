@@ -1,10 +1,9 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
+@import "../../styles/extends.scss";
 
 .card {
-  width: 411px;
-  // height: 572px;
-  border: 1px solid $blue-color;
+  @extend %cardSize;
 }
 
 .container {
@@ -21,26 +20,19 @@
 
 .name {
   margin-bottom: 16px;
-  color: $black-title-color;
   text-align: center;
-  font-family: 'Syne';
-  font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
+  color: $black-title-color;
 }
 
 .description {
   height: 270px;
   margin-bottom: 64px;
-  color: $grey-text-color;
-  text-align: center;
+
   font-family: 'Lato';
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+  text-align: center;
+  color: $grey-text-color;
 }
 
 .buttons {
@@ -50,24 +42,30 @@
 }
 
 .button {
-  height: 53px;
-  width: 278px;
   display: flex;
-  padding: 12px 0px;
   justify-content: center;
   align-items: center;
+
+  height: 53px;
+  width: 278px;
+  padding: 12px 0px;
+
   background-color: $blue-color;
 
-  @include hover(background-color, rgba(30,30,30,0.8));
+  @include hover(background-color, rgba(30, 30, 30, 0.8));
 }
 
 .buttonText {
-  color: $black-color;
   text-align: center;
-  font-family: 'Syne';
-  font-size: 24px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
   text-transform: uppercase;
+  color: $black-color;
+}
+
+.favoritesButton {
+  background-color: $button-background-color;
+
+  @extend %centered;
+  @include square(53px);
+  @include hover(background-color, $pink-color);
 }

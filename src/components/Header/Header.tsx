@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
   const handleClick = () => {
     navigate('/spaceX/favorites');
   }
+
   return (
     <div className={styles.header}>
       <LogoLink className={styles.logo} />

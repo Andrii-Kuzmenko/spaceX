@@ -1,5 +1,5 @@
 export interface Rocket {
-  id: string
-  description: string
-  name: string
+  id: string;
+  description: string;
+  name: string;
 }

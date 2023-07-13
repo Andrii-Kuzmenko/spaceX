@@ -1,34 +1,25 @@
 import React from "react";
-import { useQuery } from "@apollo/client";
-import { GET_ROCKETS } from '../../apollo/rocets';
-import { Button, Card } from "..";
-import { QueryResult } from "../../types/QueryResult";
+import { Card } from "..";
 import { Rocket } from "../../types/Rocket";
 import styles from "./CardList.module.scss";
 
 interface Props {
   activeIndex: number;
-  children: React.ReactNode | string;
+  rockets: Rocket[];
 }
 
-export const CardList: React.FC<Props> = ({ activeIndex, children }) => {
-  const { data }: QueryResult = useQuery(GET_ROCKETS);
-  const rockets = data?.rockets || [];
-
-  return (
-    <div className={styles.cardList}>
-      {data &&
-        rockets.map((rocket: Rocket, i) => {
-          const slideIndex = (activeIndex + i) % rockets.length;
-          return (
-            <Card rocket={rockets[slideIndex]} i={slideIndex} key={rocket.id}>
-              <Button className={styles.button}>
-                {children}
-              </Button>
-            </Card>
-          )
-        })
-      }
-    </div>
-  )
-};
+export const CardList = React.memo<Props>(({ activeIndex, rockets }) => (
+  <div className={styles.cardList}>
+    {rockets &&
+      rockets.map((rocket: Rocket, i) => {
+        const slideIndex = (activeIndex + i) % rockets.length;
+        return (
+          <Card rocket={rockets[slideIndex]} i={slideIndex} key={rocket.id} />
+        )
+      })
+    }
+    <div className={styles.emptyCard}></div>
+    <div className={styles.emptyCard}></div>
+    <div className={styles.emptyCard}></div>
+  </div>
+))

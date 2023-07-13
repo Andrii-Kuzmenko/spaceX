@@ -5,3 +5,4 @@ export * from './Button';
 export * from './Slider';
 export * from './Card';
 export * from './CardList';
+export * from './Controls';
