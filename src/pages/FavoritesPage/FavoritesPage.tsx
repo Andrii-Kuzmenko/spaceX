@@ -29,7 +29,9 @@ export const FavoritesPage = React.memo(() => {
             className={styles.controls}
           />}
         <div></div>
-        <Button className={styles.button} onClick={handleClick}>Clear all</Button>
+        {flights.length > 0 &&
+          <Button className={styles.button} onClick={handleClick}>Clear all</Button>
+        }
       </div>
 
       <CardList activeIndex={activeIndex} rockets={flights} />
