@@ -1,6 +1,4 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
-@import "../../styles/extends.scss";
 
 .cardList {
   display: flex;
@@ -9,10 +7,9 @@
   overflow: hidden;
 }
 
-.button {
-  @extend %centered;
-  @include square(53px);
-  background-color: $button-background-color;
-
-  @include hover(background-color, $pink-color);
+.emptyCard {
+  flex-shrink: 0;
+  width: 411px;
+  height: 784px;
+  border: 1px solid $blue-color;
 }

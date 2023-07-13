@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/extends.scss";
+
+.arrow {
+  background-color: $button-background-color;
+
+  @extend %centered;
+  @include square(44px);
+  @include hover(opacity, 0.7);
+}
+
+.arrowLeft {
+  transform: rotate(180deg);
+}

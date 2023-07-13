@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+@import '../../styles/extends.scss';
+
+.backgroundImage {
+  height: 440px;
+  background-image: url('../../images/astronaut.jpg');
+
+  @extend %positioning;
+}
+
+.title {
+  padding-top: 140px;
+  margin-bottom: 226px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $white-color;
+}
