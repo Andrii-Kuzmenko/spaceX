@@ -1,8 +1,9 @@
+import React from "react";
 import { Slider } from "../../components";
 import { ArrowDownIcon } from "../../components/icons";
 import styles from "./HomePage.module.scss";
 
-export const HomePage: React.FC = () => (
+export const HomePage = React.memo(() => (
   <div>
     <div className={styles.backgroundImage}></div>
     <h1 className={styles.title}>
@@ -18,4 +19,4 @@ export const HomePage: React.FC = () => (
 
     <Slider />
   </div >
-);
+));

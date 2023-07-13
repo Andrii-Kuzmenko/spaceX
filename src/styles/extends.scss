@@ -1,8 +1,33 @@
 @import './variables.scss';
-@import './mixins.scss';
 
 %centered {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+%positioning {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%cardSize {
+  width: 411px;
+  border: 1px solid $blue-color;
+}
+
+%navLinkUnderscore {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -4px;
+  background-color: $white-color;
 }

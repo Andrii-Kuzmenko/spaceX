@@ -3,22 +3,14 @@
 @import '../../styles/mixins.scss';
 
 .backgroundImage {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  top: 0;
   height: 740px;
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: url('../../images/pexels-spacex-586056\ 1.jpg');
+
+  @extend %positioning;
 }
 
 .title {
   padding-top: 160px;
-  font-family: 'Syne', sans-serif;
   font-size: 48px;
   font-weight: 800;
   line-height: 58px;
@@ -29,27 +21,23 @@
 
 .titleExtension {
   display: block;
-  color: $white-color;
-  font-family: "Syne", sans-serif;
   font-size: 310px;
   font-weight: 800;
   line-height: 372px;
   letter-spacing: 0em;
   text-align: center;
+  color: $white-color;
 }
 
 .exlore {
   margin-bottom: 33px;
-  @extend %centered;
   font-family: 'Lato';
   font-size: 32px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
   color: $white-color;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-
+  
+  @extend %centered;
   @include hover(opacity, 0.8);
 }
 

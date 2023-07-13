@@ -6,12 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   max-width: $max-width;
+  height: 80px;
   margin: 0 auto;
   padding: 0 80px;
-  height: 80px;
-  
+
   background: rgba(30, 30, 30, 0.48);
 }
 
@@ -29,9 +29,7 @@
 }
 
 .signInButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centered;
   gap: 10px;
   width: 163px;
   padding: 12px 0px;
@@ -42,11 +40,7 @@
 }
 
 .signInButtonText {
-  font-family: 'Syne', sans-serif;
-  font-size: 24px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
   color: $black-color;
   text-align: center;
   text-transform: uppercase;
