@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/Logo.png";
+import { LogoIcon } from "../icons";
 
 interface Props {
   className?: string,
@@ -8,11 +8,6 @@ interface Props {
 
 export const LogoLink: React.FC<Props> = ({ className }) => (
   <Link to="/spaceX/" >
-    <div className={className} >
-      <img
-        src={logo}
-        alt="logo"
-      />
-    </div>
+      <LogoIcon className={className} />
   </Link>
 )
