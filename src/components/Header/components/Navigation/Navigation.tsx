@@ -1,11 +1,18 @@
 import React from "react";
 import styles from "./Navigation.module.scss";
 import { NavigationLink } from "../NavigationLink/NavigationLink";
+import classNames from "classnames";
 
-export const Navigation: React.FC = () => {
+type Props = {
+  className?: string,
+  onClick?: () => void,
+}
+
+export const Navigation: React.FC<Props> = ({ className, onClick }) => {
   return (
-    <div className={styles.navList}>
+    <div className={classNames([styles.navList], className)}>
       <NavigationLink
+        onClick={onClick}
         to="/spaceX/"
         className={styles.navItem}
       >
@@ -13,6 +20,7 @@ export const Navigation: React.FC = () => {
       </NavigationLink>
 
       <NavigationLink
+        onClick={onClick}
         to="/spaceX/tours"
         className={styles.navItem}
       >
@@ -20,6 +28,7 @@ export const Navigation: React.FC = () => {
       </NavigationLink>
 
       <NavigationLink
+        onClick={onClick}
         to="/spaceX/about"
         className={styles.navItem}
       >
@@ -27,6 +36,7 @@ export const Navigation: React.FC = () => {
       </NavigationLink>
 
       <NavigationLink
+        onClick={onClick}
         to="/spaceX/help"
         className={styles.navItem}
       >

@@ -5,3 +5,5 @@ export * from './EmptyCircleIcon';
 export * from './FilledCircleIcon';
 export * from './HeartIcon';
 export * from './LogoIcon';
+export * from './BurgerIcon';
+export * from './CrossIcon';

@@ -7,12 +7,23 @@
   justify-content: space-between;
   align-items: center;
 
-  max-width: $max-width;
-  height: 80px;
+  height: $header-height;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 20px;
 
   background: rgba(30, 30, 30, 0.48);
+
+  @include onTablet {
+    padding: 0 40px;
+  }
+
+  @include onSmallDesktop {
+    padding: 0 60px;
+  }
+
+  @include onBigDesktop {
+    padding: 0 80px;
+  }
 }
 
 .logo {
@@ -20,7 +31,7 @@
   width: 230px;
 }
 
-.heartButton {
+.burgerButton {
   background-color: $button-background-color;
 
   @extend %centered;
@@ -28,29 +39,7 @@
   @include hover(background-color, $pink-color);
 }
 
-.signInButton {
-  @extend %centered;
-  gap: 10px;
-  width: 163px;
-  padding: 12px 0px;
-
-  background-color: $blue-color;
-
-  @include hover(opacity, 0.8);
-}
-
-.signInButtonText {
-  font-weight: 600;
-  color: $black-color;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .ButtonGroup {
   display: flex;
   gap: 12px;
-}
-
-.active {
-  background-color: $pink-color;
 }

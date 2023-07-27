@@ -13,10 +13,14 @@
   padding-top: 140px;
   margin-bottom: 226px;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
   color: $white-color;
+
+  @include onSmallDesktop {
+    font-size: 48px;
+  }
 }
 
 .buttonContainer {

@@ -27,7 +27,7 @@ export const Card = React.memo<Props>(({ rocket, i }) => {
 
       return;
     }
-    
+
     setFavorites(current => [...current, rocket]);
   }
 
@@ -42,9 +42,7 @@ export const Card = React.memo<Props>(({ rocket, i }) => {
         <h3 className={styles.name}>{name}</h3>
         <p className={styles.description}>{description}</p>
         <div className={styles.buttons}>
-          <Button
-            className={styles.button}
-          >
+          <Button className={styles.button}>
             <p className={styles.buttonText}>buy</p>
           </Button>
 

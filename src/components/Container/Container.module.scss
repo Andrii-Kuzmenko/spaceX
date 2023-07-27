@@ -1,7 +1,20 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 20px;
+
+  @include onTablet {
+    padding: 0 40px;
+  }
+
+  @include onSmallDesktop {
+    padding: 0 60px;
+  }
+
+  @include onBigDesktop {
+    padding: 0 80px;
+  }
 }

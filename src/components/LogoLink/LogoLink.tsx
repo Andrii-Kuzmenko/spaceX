@@ -4,10 +4,11 @@ import { LogoIcon } from "../icons";
 
 interface Props {
   className?: string,
+  onClick: () => void,
 }
 
-export const LogoLink: React.FC<Props> = ({ className }) => (
-  <Link to="/spaceX/" >
-      <LogoIcon className={className} />
+export const LogoLink: React.FC<Props> = ({ className, onClick }) => (
+  <Link to="/spaceX/" onClick={onClick}>
+    <LogoIcon className={className} />
   </Link>
 )

@@ -1,9 +1,8 @@
+import React, { useState } from 'react';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { Button, CardList, Controls } from '../../components';
 import { favoritesState } from '../../state';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
 import styles from './FavoritesPage.module.scss';
-import { useState } from 'react';
-import React from 'react';
 
 export const FavoritesPage = React.memo(() => {
   const flights = useRecoilValue(favoritesState);
@@ -22,7 +21,7 @@ export const FavoritesPage = React.memo(() => {
         {flights.length === 0 &&
           <p className={styles.text}>You don't have any favorites yet</p>
         }
-        {flights.length > 3 &&
+        {flights.length > 1 &&
           <Controls
             rockets={flights}
             setActiveIndex={setActiveIndex}

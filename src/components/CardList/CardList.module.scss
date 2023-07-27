@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/extends.scss";
 
 .cardList {
   display: flex;
@@ -9,7 +10,7 @@
 
 .emptyCard {
   flex-shrink: 0;
-  width: 411px;
   height: 784px;
-  border: 1px solid $blue-color;
+
+  @extend %cardSize;
 }

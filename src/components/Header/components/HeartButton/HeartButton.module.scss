@@ -1,0 +1,15 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/extends.scss";
+@import "../../../../styles/mixins.scss";
+
+.heartButton {
+  background-color: $button-background-color;
+
+  @extend %centered;
+  @include square(53px);
+  @include hover(background-color, $pink-color);
+}
+
+.active {
+  background-color: $pink-color;
+}

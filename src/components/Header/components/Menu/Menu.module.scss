@@ -1,0 +1,41 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/extends.scss";
+@import "../../../../styles/mixins.scss";
+
+.menu {
+  position: fixed;
+  z-index: 2;
+  top: $header-height;
+  left: 0;
+  right: 0;
+  height: calc(100vh - $header-height);
+  padding-top: 16px;
+  background-color: $black-color;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-150%);
+
+  &Open {
+    transform: translateY(0);
+    z-index: 2;
+  }
+
+  @include onSmallDesktop {
+    display: none;
+  }
+}
+
+.menuFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  background-color: $black-color;
+}
+
+.navigation {
+  flex-direction: column;
+}
