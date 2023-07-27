@@ -6,9 +6,9 @@ import { HeartIcon, DeleteIcon } from "../icons";
 import { favoritesState } from "../../state";
 
 import styles from "./Card.module.scss";
-import img_0 from "../../images/pexels-spacex-586056 1.jpg";
-import img_1 from "../../images/pexels-mikhail-nilov-7672013 1.jpg";
-import img_2 from "../../images/astronaut.jpg";
+import img_0 from "../../images/img_0.jpg";
+import img_1 from "../../images/img_1.jpg";
+import img_2 from "../../images/img_2.jpg";
 
 interface Props {
   rocket: Rocket;
