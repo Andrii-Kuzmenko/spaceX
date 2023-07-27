@@ -1,32 +1,57 @@
 @import '../../styles/variables.scss';
 @import '../../styles/extends.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
 
 .backgroundImage {
   height: 740px;
-  background-image: url('../../images/pexels-spacex-586056\ 1.jpg');
+  animation: changeBackground 20s infinite;
 
   @extend %positioning;
 }
 
 .title {
   padding-top: 160px;
-  font-size: 48px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 58px;
   letter-spacing: 0em;
   text-align: center;
   color: $white-color;
+
+  @include onTablet {
+    font-size: 36px;
+  }
+
+  @include onSmallDesktop {
+    font-size: 36px;
+  }
+
+  @include onBigDesktop {
+    font-size: 48px;
+  }
 }
 
 .titleExtension {
   display: block;
-  font-size: 310px;
+  font-size: 120px;
   font-weight: 800;
   line-height: 372px;
   letter-spacing: 0em;
   text-align: center;
   color: $white-color;
+
+  @include onTablet {
+    font-size: 180px;
+  }
+
+  @include onSmallDesktop {
+    font-size: 225px;
+  }
+
+  @include onBigDesktop {
+    font-size: 310px;
+  }
 }
 
 .exlore {
@@ -36,7 +61,7 @@
   color: $white-color;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  
+
   @extend %centered;
   @include hover(opacity, 0.8);
 }

@@ -1,18 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/Logo.png";
+import { LogoIcon } from "../icons";
 
 interface Props {
   className?: string,
+  onClick: () => void,
 }
 
-export const LogoLink: React.FC<Props> = ({ className }) => (
-  <Link to="/spaceX/" >
-    <div className={className} >
-      <img
-        src={logo}
-        alt="logo"
-      />
-    </div>
+export const LogoLink: React.FC<Props> = ({ className, onClick }) => (
+  <Link to="/spaceX/" onClick={onClick}>
+    <LogoIcon className={className} />
   </Link>
 )

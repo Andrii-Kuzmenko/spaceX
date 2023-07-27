@@ -1,0 +1,21 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/extends.scss";
+@import "../../../../styles/mixins.scss";
+
+.signInButton {
+  @extend %centered;
+  gap: 10px;
+  width: 163px;
+  padding: 12px 0px;
+
+  background-color: $blue-color;
+
+  @include hover(opacity, 0.8);
+}
+
+.signInButtonText {
+  font-weight: 600;
+  color: $black-color;
+  text-align: center;
+  text-transform: uppercase;
+}

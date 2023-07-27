@@ -4,14 +4,15 @@ import { NavLink } from "react-router-dom";
 import styles from "./NavigationLink.module.scss"
 
 interface Props {
-  to: string;
-  children: React.ReactNode | string;
-  className?: string;
+  to: string,
+  children: React.ReactNode | string,
+  className?: string,
+  onClick?: () => void,
 }
 
-export const NavigationLink: React.FC<Props> = ({ to, children, className }) => (
+export const NavigationLink: React.FC<Props> = ({ to, children, className, onClick }) => (
   <NavLink
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call
+    onClick={onClick}
     className={({ isActive }) => classNames(
       [className],
       { [styles.active]: isActive },
