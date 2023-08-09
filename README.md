@@ -23,7 +23,6 @@ Responsive application according to [Figma design](https://www.figma.com/file/ix
  - React Router
  - React Apollo (to get data from API)
  - Recoil (for state management)
- - Styled Component
  - ClassNames
  - JavaScript
  - SCSS
